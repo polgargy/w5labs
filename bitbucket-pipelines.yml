@@ -1,0 +1,22 @@
+# pipelines:
+#   branches:
+#     dev:
+#       - step:
+#           name: Staging
+#           caches:
+#             # - composer
+#             # - node
+#           script:
+#             - apt-get update && apt-get install -y unzip
+#             - apt-get install -y openssh-client
+#             - ssh kopp@92.119.123.161 'bash -s' < bitbucket-dev.sh
+#     master:
+#       - step:
+#           name: Production
+#           caches:
+#             # - composer
+#             # - node
+#           script:
+#             - apt-get update && apt-get install -y unzip
+#             - apt-get install -y openssh-client
+#             - ssh kopp@92.119.123.161 'bash -s' < bitbucket-master.sh
